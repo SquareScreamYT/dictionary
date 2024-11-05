@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Dictionary</title>
+  <meta http-equiv='cache-control' content='no-cache'> 
+  <html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
+  <meta http-equiv='expires' content='0'> 
+  <meta http-equiv='pragma' content='no-cache'>
+  <meta name="google" content="notranslate">
+  <meta http-equiv="Content-Language" content="en">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <input type="text" id="search" placeholder="search for words...">
+      <button id="category-filter-button">select categories</button>
+      <div id="category-popup" class="popup">
+        <div class="popup-content">
+          <h2>select categories</h2>
+          <div id="category-checkboxes"></div>
+          <div class="checkbox-controls">
+            <button id="check-all">select all</button>
+            <button id="uncheck-all">select none</button>
+          </div>
+          <div class="search-toggle">
+            <input type="checkbox" id="fuzzy-search-toggle" checked>
+            <label for="fuzzy-search-toggle">fuzzy search</label>
+            <input type="checkbox" id="search-description" checked>
+            <label for="description-search-toggle">search definitions</label>
+            <div class="fuzzy-strength">
+              <input type="range" id="fuzzy-strength" min="1" max="10" value="2">
+              <label for="fuzzy-strength">fuzzy search strength</label>
+            </div>
+          </div>
+          <button id="apply-filters">done</button>
+        </div>
+      </div>
+      <div id="wordList"></div>
+    </div>
+    <div class="content">
+      <div style="display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
+        <h1 style="margin: 0;" id="wordName">word</h1>
+        <div style="display: flex; align-items: center;">
+          <button onclick="copyURL()" id="copy-button">copy link</button>
+          <div id="customAlert" class="custom-alert">
+            <div class="alert-content">
+              <p id="alertMessage"></p>
+              <button id="closeAlert">ok</button>
+            </div>
+          </div>
+          <button onclick="showStats()" id="stats-button">stats</button>
+          <select id="color-scheme" onchange="changeColorScheme()">
+            <option value="white">white</option>
+            <option value="black">black</option>
+            <option value="blue" selected>blue</option>
+            <option value="teal">teal</option>
+            <option value="emerald">green</option>
+          </select>
+        </div>
+      </div>
+      <div id="wordDetails">
+        <h4>category</h4>
+        <p>definition</p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

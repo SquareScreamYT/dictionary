@@ -1,0 +1,22 @@
+[
+	{
+		"example": {
+			"category": [
+				"category"
+			],
+			"definition": "lorem ipsum dolor sit amet, consectetur adipiscing elit",
+			"image": "https://picsum.photos/500?random=1",
+			"image2": "https://picsum.photos/500?random=2"
+		}
+	},
+	{
+		"example2": {
+			"category": [
+				"category", "category"
+			],
+			"definition": "lorem ipsum dolor sit amet, consectetur adipiscing elit",
+			"image": "https://picsum.photos/500?random=3",
+			"image2": "https://picsum.photos/500?random=4"
+		}
+	}
+]
